@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Playground</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div id="playground">
+      <main>
+        <h2>
+          Update <span class="special-text-invert">CSS</span> variables with
+          <span class="special-text">JS</span>
+        </h2>
+        <div class="control">
+          <div class="group">
+            <label for="spacing">Spacing:</label>
+            <input
+              type="range"
+              name="spacing"
+              min="0"
+              max="20"
+              value="3"
+              data-unit="px"
+            />
+          </div>
+          <div class="group">
+            <label for="blur">Blur:</label>
+            <input
+              type="range"
+              name="blur"
+              min="0"
+              max="10"
+              value="2"
+              data-unit="px"
+            />
+          </div>
+          <div class="group">
+            <label for="color">Base Color:</label>
+            <input type="color" name="color" value="#cccccc" />
+          </div>
+        </div>
+        <div class="preview-image">
+          <img src="./play-image.jpg" alt="preview" />
+        </div>
+      </main>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

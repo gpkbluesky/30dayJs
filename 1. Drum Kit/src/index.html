@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drum Kit | Yo!</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div id="root">
+      <div id="playground">
+        <section class="beat">
+          <div class="button" data-key="103">
+            <kbd>7</kbd>
+            <span>Savage Beat Chant</span>
+          </div>
+          <div class="button" data-key="104">
+            <kbd>8</kbd>
+            <span>Savage Beat Closed Hat 1</span>
+          </div>
+          <div class="button" data-key="105">
+            <kbd>9</kbd>
+            <span>Savage Beat Closed Hat 2</span>
+          </div>
+          <div class="button" data-key="100">
+            <kbd>4</kbd>
+            <span>Savage Beat Fx</span>
+          </div>
+          <div class="button" data-key="101">
+            <kbd>5</kbd>
+            <span>Savage Beat Kick</span>
+          </div>
+          <div class="button" data-key="102">
+            <kbd>6</kbd>
+            <span>Savage Beat Open Hat 1</span>
+          </div>
+          <div class="button" data-key="97">
+            <kbd>1</kbd>
+            <span>Savage Beat Open Hat 2</span>
+          </div>
+          <div class="button" data-key="98">
+            <kbd>2</kbd>
+            <span>Savage Beat Snare Clap</span>
+          </div>
+          <div class="button" data-key="99">
+            <kbd>3</kbd>
+            <span>Savage Beat 808</span>
+          </div>
+        </section>
+
+        <section class="effect">
+          <div class="button" data-key="65">
+            <kbd>a</kbd>
+            <span>808</span>
+          </div>
+          <div class="button" data-key="83">
+            <kbd>s</kbd>
+            <span>bass</span>
+          </div>
+          <div class="button" data-key="68">
+            <kbd>d</kbd>
+            <span>bell hit with echo</span>
+          </div>
+          <div class="button" data-key="90">
+            <kbd>z</kbd>
+            <span>dark string</span>
+          </div>
+          <div class="button" data-key="88">
+            <kbd>x</kbd>
+            <span>piano</span>
+          </div>
+          <div class="button" data-key="67">
+            <kbd>c</kbd>
+            <span>saw pluck</span>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Beat -->
+    <audio
+      src="../Drum Kit/Savage Beat  Chant.wav"
+      data-key="103"
+    ></audio>
+    <audio
+      src="../Drum Kit/Savage Beat  Closed Hat 1.wav"
+      data-key="104"
+    ></audio>
+    <audio
+      src="../Drum Kit/Savage Beat  Closed Hat 2.wav"
+      data-key="105"
+    ></audio>
+    <audio
+      src="../Drum Kit/Savage Beat  Fx.wav"
+      data-key="100"
+    ></audio>
+    <audio
+      src="../Drum Kit/Savage Beat  Kick.wav"
+      data-key="101"
+    ></audio>
+    <audio
+      src="../Drum Kit/Savage Beat  Open Hat 1.wav"
+      data-key="102"
+    ></audio>
+    <audio
+      src="../Drum Kit/Savage Beat  Open Hat 2.wav"
+      data-key="97"
+    ></audio>
+    <audio
+      src="../Drum Kit/Savage Beat  Snare Clap.wav"
+      data-key="98"
+    ></audio>
+    <audio
+      src="../Drum Kit/Savage Beat 808.wav"
+      data-key="99"
+    ></audio>
+
+    <!-- Effect -->
+    <audio
+      src="../Loops (95 Bpm)/808.wav"
+      data-key="65"
+      data-volume="50"
+      ></audio>
+    <audio
+      src="../Loops (95 Bpm)/Bass.wav"
+      data-key="83"
+      data-volume="50"
+      ></audio>
+    <audio
+      src="../Loops (95 Bpm)/Bell Hit with Echo.wav"
+      data-key="68"
+      data-volume="50"
+      ></audio>
+    <audio
+      src="../Loops (95 Bpm)/Dark String.wav"
+      data-key="90"
+      data-volume="50"
+      ></audio>
+    <audio
+      src="../Loops (95 Bpm)/Piano.wav"
+      data-key="88"
+      data-volume="50"
+      ></audio>
+    <audio
+      src="../Loops (95 Bpm)/Saw Pluck.wav"
+      data-key="67"
+      data-volume="50"
+      ></audio>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

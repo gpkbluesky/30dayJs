@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#playground {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  background: linear-gradient(to right, #E55D87, #5FC3E4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#clock > .clock-face {
+  width: 240px;
+  height: 240px;
+  border: 16px solid rgba(255, 255, 255, .3);
+  border-radius: 50%;
+
+  position: relative;
+}
+
+#clock .hand {
+  width: 112px;
+  height: 4px;
+  border-radius: 2px;
+  position: absolute;
+
+  top: calc(50% - 2px);
+  left: 50%;
+  transform: rotate(-.25turn);
+  transform-origin: 0 50%;
+  transition: all .05s cubic-bezier(.1, 2.7, .58, 1);
+}
+
+#clock .hand.hour-hand {
+  background: linear-gradient(to right, #845ec2, #fff);
+  width: 80px;
+}
+
+#clock .hand.min-hand {
+  background: linear-gradient(to right, #f9f871, #fff);
+  width: 104px;
+}
+
+#clock .hand.second-hand {
+  background: linear-gradient(to right, #ff5e78, #fff);
+}
+
+#clock [class^="mile"]:not(.miles) {
+  background: rgba(0, 0, 0, .3);
+  width: 12px;
+  height: 4px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+#clock .mile-1 {
+  transform: translate(124px, -50%);
+}
+
+#clock .mile-2 {
+  transform: translate(-136px, -50%);
+}
+
+#clock .mile-3 {
+  transform: translate(-50%, 128px) rotate(.25turn);
+}
+
+#clock .mile-4 {
+  transform: translate(-50%, -132px) rotate(-.25turn);
+}

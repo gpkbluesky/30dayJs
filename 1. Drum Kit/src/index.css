@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#playground {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  background: linear-gradient(to right, #E55D87, #5FC3E4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#playground > section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 1fr;
+  grid-gap: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.beat {
+  border-bottom: 2px solid #ff7171;
+}
+
+.button {
+  border: 1px solid #440a67;
+  border-radius: 3px;
+  padding: 10px 20px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+
+  background: rgba(255, 255, 255, .15);
+  max-width: 120px;
+  position: relative;
+
+  transform: scale(.9);
+}
+
+.button > kbd {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.button > span {
+  color: #f0c929;
+  font-weight: 700;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  box-shadow: 0 0 3px 3px rgb(240, 201, 41);
+  border-radius: 3px;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.button.active {
+  transform: scale(1);
+}
+
+.button.active::after {
+  opacity: 1;
+}

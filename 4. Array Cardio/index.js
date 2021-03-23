@@ -17,7 +17,9 @@ const inventors = [
 const fifteen = inventors.filter(
   (inventor) => inventor?.year > 1500 && inventor?.year < 1600
 );
-console.log("1. Filter the list of inventors for those who were born in the 1500's");
+console.log(
+  "1. Filter the list of inventors for those who were born in the 1500's"
+);
 console.table(fifteen);
 
 // 2. Give us an array of the inventory first and last names
@@ -116,13 +118,62 @@ const data = [
   "car",
   "truck",
 ];
+
 // 7. Sum up the instances of each of these
 const transportation = data.reduce(
   (result, item) => ({
     ...result,
-    [item]: (result[item] || 0) + 1
+    [item]: (result[item] || 0) + 1,
   }),
   {}
 );
 console.log("7. Sum up the instances of each of these");
 console.table(transportation);
+
+// -------------------------------------
+const people2 = [
+  { name: "Wes", year: 1988 },
+  { name: "Kait", year: 1986 },
+  { name: "Irv", year: 1970 },
+  { name: "Lux", year: 2015 },
+];
+
+const CURRENT_YEAR = new Date().getFullYear();
+
+// 8. Is at least one person 19?
+const isLeastOneAdult = people2.some(
+  (person) => CURRENT_YEAR - person?.year > 18
+);
+
+console.log("8. Is at least one person 19?");
+console.log(isLeastOneAdult);
+
+// 9. Is everyone 19?
+const isAllAdult = people2.every((person) => CURRENT_YEAR - person?.year > 18);
+console.log("9. Is everyone 19?");
+console.log(isAllAdult);
+
+// -------------------------------------
+const comments = [
+  { text: "Love this!", id: 523423 },
+  { text: "Super good", id: 823423 },
+  { text: "You are the best", id: 2039842 },
+  { text: "Ramen in my fav food ever", id: 123523 },
+  { text: "Nice Nice Nice!", id: 542328 },
+];
+
+// 10. Find the comment with the ID of 823423
+const comment = comments.find((comment) => comment?.id === 823423);
+console.log("10. Find the comment with the ID of 823423");
+console.log(comment);
+
+// 11. Find the comment index with the ID of 823423
+const commentIndex = comments.findIndex((comment) => comment?.id === 823423);
+
+const newComments = [
+  ...comments.slice(0, commentIndex),
+  ...comments.slice(commentIndex + 1),
+]
+
+console.log("11. Find the comment index with the ID of 823423 and delete it");
+console.log(newComments);

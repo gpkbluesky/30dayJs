@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+html {
+  box-sizing: border-box;
+  user-select: none;
+  font-family: 'Roboto Mono';
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#playground {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  background: linear-gradient(to right, #e55d87, #5fc3e4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#playground .list {
+  max-width: 400px;
+  background: #fff;
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, .1);
+  border-radius: 4px;
+}
+
+#playground .list .item {
+  display: flex;
+  align-items: stretch;
+}
+
+#playground .list .item:not(:last-child) {
+  border-bottom: 1px solid #f1f1f1;
+}
+
+input[type="checkbox"] {
+  margin: 20px;
+  align-self: center;
+}
+
+input:checked + p {
+  background: #f9f9f9;
+  text-decoration: line-through;
+}
+
+p {
+  margin: 0;
+  padding: 8px 16px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 200;
+  border-left: 1px solid #d1e2ff;
+
+  transition: background cubic-bezier(0.23, 1, 0.320, 1);
+}

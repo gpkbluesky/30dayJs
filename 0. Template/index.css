@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
 html {
   box-sizing: border-box;
   user-select: none;
-  font-family: 'helvetica neue';
+  font-family: 'Roboto Mono';
 }
 
 *, *::before, *::after {

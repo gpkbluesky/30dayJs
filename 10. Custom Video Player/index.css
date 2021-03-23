@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
+html {
+  box-sizing: border-box;
+  user-select: none;
+  font-family: "Roboto Mono";
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#playground {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  background: linear-gradient(to right, #e55d87, #5fc3e4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#player {
+  max-width: 600px;
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+#player .viewer {
+  width: 100%;
+}
+
+#player:hover .controls {
+  transform: translateY(0);
+}
+
+#player:hover .controls .progress .progress-filled  {
+  height: 8px;
+}
+
+#player .controls {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 0 0 8px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(calc(100% - 2px));
+  transition: transform .3s;
+}
+
+#player .controls .player-button  {
+  padding: 4px 8px;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#player .controls .buttons {
+  display: flex;
+  align-items: center;
+}
+
+#player .controls .buttons * {
+  flex: 1;
+}
+
+#player .controls .buttons input {
+  flex: 4;
+}
+
+#player .controls .progress {
+  background: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+#player .controls .progress .progress-filled {
+  display: block;
+  width: 0;
+  height: 2px;
+  background: rgb(230, 230, 0);
+  cursor: inherit;
+}
